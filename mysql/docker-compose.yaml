@@ -16,3 +16,10 @@ services:
     image: adminer
     ports:
       - "8080:8080"
+
+  tomcat:
+    image: tomcat
+    ports:
+      - "8081:8080"
+    volumes:
+      - "./stockwatcher.war:/usr/local/tomcat/webapps/stockwatcher.war"
